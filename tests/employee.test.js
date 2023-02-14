@@ -43,7 +43,8 @@ test("can add email via getemail", () => {
 });
 
 test("get role of employee", () => {
+    const testRole = "Employee";
     const employee = new Employee("Hinal", 1234, "hinal1234@gmail.com");
-    expect(employee.getRole()).toEqual("Employee");
+    expect(employee.getRole()).tobe(testRole);
 });
 
