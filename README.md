@@ -37,10 +37,11 @@ npm install & Node index.js & Jest (npm run test)
 ## Schreenshot
 
 ![Alt text](assets/Screenshot%202023-02-15%20at%205.47.08%20pm.png)
+![Alt text](assets/Screenshot%202023-02-15%20at%208.35.34%20pm.png)
 
 ## WalkthroughVideo 
 
-(https://drive.google.com/file/d/1zpkaPRQCq9_XWd5yDc619OJIj_dSbKJJ/view?usp=sharing)
+https://drive.google.com/file/d/1lje2ASUc3YLVDZVZjnar2NyWEAZO8_v3/view?usp=sharing
 
 ## License
 
