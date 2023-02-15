@@ -2,11 +2,8 @@ const inquirer = require("inquirer");
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const dist_directory = path.resolve(__dirname, 'dist');
-const distpath = path.join(dist_directory, 'team.html');
 const fs = require("fs");
-const path = require('path');
-const generateHtml = require('./src/template.HTML');
+const generateHtml = require('./src/templateHTML.js');
 const pageArray = [];
 
 function app() {
@@ -31,6 +28,11 @@ function app() {
         };
 
 function addManager() {
+    console.log(`
+    =============================
+    Adding employees to the team
+    =============================
+    `);
             inquirer.prompt([
                 {
                     type: "input",
@@ -125,12 +127,23 @@ function addIntern() {
                     data.internName,
                     data.internId,
                     data.internEmail,
-                    data.internGithub,
+                    data.internSchool,
                 )
                 pageArray.push(intern);
                 createTeam();
             })
         };
-    }
+
+function teamMembers(){
+            console.log(pageArray);
+            fs.writeFile('./dist/team.html', generateHtml(pageArray), (err) =>
+            err ? console.error(err) : console.log('Success! File has been created.'));
+        };
+    createTeam();
+
+    };
+    
+    app();
+    
 
 

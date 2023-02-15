@@ -1,22 +1,22 @@
 
 const Engineer = require("../lib/Engineer");
 
-test("can create a github", () => {
+test("Returns GitHub id as passed to fucntion", () => {
     const testGithub = "Hinalpatel8988";
     const engineer = new Engineer("Hinal", 1234, "hinal1234@gmail.com", testGithub);
-    expect(engineer.github).tobe(testGithub);
+    expect(engineer.github).toBe(testGithub);
 });
 
-test("can get github via getgithub", () => {
+test("can set GitHub", () => {
     const testGithub = "Hinalpatel8988";
     const engineer = new Engineer("Hinal", 1234, "hinal1234@gmail.com", testGithub);
-    expect(engineer.getGithub()).tobe(testGithub);
+    expect(engineer.getGithub()).toBe(testGithub);
 });
 
 test("get role of engineer", () => {
     const testRole = "Engineer";
     const engineer = new Engineer("Hinal", 1234, "hinal1234@gmail.com", "Hinalpatel8988");
-    expect(employee.getRole()).tobe(testRole);
+    expect(engineer.getRole()).toBe(testRole);
 });
 
 

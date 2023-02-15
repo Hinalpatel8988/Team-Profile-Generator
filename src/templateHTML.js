@@ -13,13 +13,16 @@ const generateTeamPage = function (createTeam) {
     </head>
     <body>
         <header>
-            <nav class="navbar" id="navbar">
-                <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">My Team Profile</span>
-            </nav>
+        <nav class="nav justify-content-center bg-info py-5">
+        <div class="navbar text-white text-center text-bold fs-1">
+          <h1 style=" font-family: 'Font Awesome 5 Free';">My Team Profile</h1> 
+        </div>
+        </nav>
         </header>
         <main>
             <div class="container">
-                <div class="row justify-content-center" id="team-cards">
+                <div class="row justify-content-center" id="team-cards" style="
+                padding-top: 45px; font-family: 'Font Awesome 5 Free';">
                     <!--Team Cards-->
                     ${createTeam}
                 </div>
@@ -61,9 +64,9 @@ const generateEngineer = function (engineer) {
 </div>
 <div class="card-body">
     <ul class="list-group">
-    <li class="list-group-item">${engineer.getId()}</li>
+    <li class="list-group-item">ID: ${engineer.getId()}</li>
     <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-    <li class="list-group-item">Office number: <a href="mailto:${engineer.getGithub()}">${engineer.getGithub()}</a></li>
+    <li class="list-group-item">Github: ${engineer.getGithub()}</li>
     </ul>
 </div>
 </div>
@@ -79,9 +82,9 @@ const generateIntern = function (intern) {
 </div>
 <div class="card-body">
     <ul class="list-group">
-    <li class="list-group-item">${intern.getId()}</li>
+    <li class="list-group-item">ID: ${intern.getId()}</li>
     <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-    <li class="list-group-item">Office number: <a href="mailto:${intern.getSchool()}">${intern.getSchool()}</a></li>
+    <li class="list-group-item">School: ${intern.getSchool()}</li>
     </ul>
 </div>
 </div>
